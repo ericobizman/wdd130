@@ -1,15 +1,18 @@
 .callout {
-	
+	background-color: blue;
+    
 }
 
 .callout img {
+    align-items: end;
 	
 }
 
 blockquote {
+    border: 20px 10px 20px 10px;
 	
 }
 
 cite {
-	
+	align-items: end;
 }
