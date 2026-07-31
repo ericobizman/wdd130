@@ -33,6 +33,10 @@ p {
     max-width: 400px;
 }
 
+nav li {
+    flex: auto;
+}
+
 #devtools-btn {
     background-color: #36454f;
     color: white;
