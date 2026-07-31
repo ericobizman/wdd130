@@ -137,6 +137,10 @@ article {
     margin-right: 20px;
 }
 
+.hero article img {
+    float: right;
+}
+
 /* ==========================================
    HISTORY SECTION
 ========================================== */
