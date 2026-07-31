@@ -119,26 +119,18 @@ article {
     right: 40px;
     bottom: 30px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px;
-
     background-color: var(--secondary-color);
-}
-
-.hero article img {
-    width: 150px;
-}
-
-.hero article p {
-    flex: 1;
-    margin-right: 20px;
+    padding: 20px;
 }
 
 .hero article img {
     float: right;
+    width: 150px;
+    margin-left: 20px;
+}
+
+.hero article p {
+    margin: 0;
 }
 
 /* ==========================================
