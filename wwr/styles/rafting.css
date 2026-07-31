@@ -5,7 +5,7 @@
 :root {
     --primary-color: #055a05;
     --secondary-color: #f4a261;
-    --accent1-color: #264653;
+    --accent1-color: #ffffff;
     --accent2-color: #e9c46a;
 
     --heading-font: "Times New Roman", Georgia, serif;
@@ -60,7 +60,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: var(--accent1-color);
     font-size: 1.1rem;
     font-weight: bold;
 }
@@ -109,7 +109,7 @@ article {
     padding: 16px;
     text-align: center;
     background-color: var(--accent1-color);
-    color: white;
+    color: var(--accent1-color);
     opacity: 0.8;
 }
 
@@ -210,12 +210,12 @@ footer {
 
     background-color: var(--primary-color);
 
-    color: white;
+    color: var(--accent1-color);
     font-weight: bold;
 }
 
 footer p {
-    color: white;
+    color: var(--accent1-color);
     margin: 0;
 }
 
