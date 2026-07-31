@@ -95,7 +95,11 @@ nav a:hover {
    TYPOGRAPHY
 ========================================== */
 
-h1,
+h1 {
+    font-family: var(--heading-font);
+    text-align: center;
+}
+
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
@@ -126,12 +130,17 @@ article {
 .hero h1 {
     position: absolute;
     top: 20px;
+    left: 0;
     width: 100%;
     padding: 16px;
+
+    font-family: var(--heading-font);
     text-align: center;
 
     background-color: #264653cc;
     color: var(--white);
+
+    z-index: 2;
 }
 
 .hero article {
@@ -144,6 +153,8 @@ article {
     color: var(--accent1-color);
 
     padding: 20px;
+
+    z-index: 1;
 }
 
 .hero article img {
