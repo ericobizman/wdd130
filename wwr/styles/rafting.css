@@ -1,7 +1,3 @@
-/* ==========================================
-   CSS VARIABLES
-========================================== */
-
 :root {
     --primary-color: #055a05;
     --secondary-color: #f4a261;
@@ -13,10 +9,6 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* ==========================================
-   GLOBAL RESET
-========================================== */
-
 *,
 *::before,
 *::after {
@@ -24,10 +16,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* ==========================================
-   BODY
-========================================== */
 
 body {
     font-family: var(--body-font);
@@ -38,13 +26,10 @@ body {
 header,
 main,
 footer {
-    width: 840px;
+    max-width: 840px;
+    width: 100%;
     margin: 0 auto;
 }
-
-/* ==========================================
-   HEADER
-========================================== */
 
 header {
     display: grid;
@@ -58,10 +43,6 @@ header img {
     width: 100px;
     height: auto;
 }
-
-/* ==========================================
-   NAVIGATION
-========================================== */
 
 nav {
     margin: 0;
@@ -91,13 +72,10 @@ nav a:hover {
     color: var(--accent2-color);
 }
 
-/* ==========================================
-   TYPOGRAPHY
-========================================== */
-
 h1 {
     font-family: var(--heading-font);
     text-align: center;
+    margin: 20px 0;
 }
 
 h2 {
@@ -112,10 +90,6 @@ article {
     margin: 16px;
     padding: 8px;
 }
-
-/* ==========================================
-   HERO SECTION
-========================================== */
 
 .hero {
     position: relative;
@@ -168,10 +142,6 @@ article {
     color: var(--accent1-color);
 }
 
-/* ==========================================
-   HISTORY SECTION
-========================================== */
-
 .history {
     display: grid;
     grid-template-columns: 1fr 250px 1fr;
@@ -187,10 +157,6 @@ article {
     width: 100%;
     height: auto;
 }
-
-/* ==========================================
-   ADVENTURE SECTION
-========================================== */
 
 section {
     margin: 40px 0;
@@ -274,13 +240,14 @@ footer img {
 
 .company-info {
     text-align: center;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 .company-info p {
-    margin: 5px 0;
+    margin: 2px 0;
     padding: 0;
     font-size: 1rem;
+    font-weight: bold;
 }
 
 /* Map and Form Layout */
@@ -288,8 +255,8 @@ footer img {
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: start;
+    gap: 30px;
+    align-items: stretch;
     margin: 40px 0;
 }
 
@@ -299,11 +266,13 @@ footer img {
     border: 0;
 }
 
-/* Contact Form */
-
 .contact-form form {
     display: grid;
-    gap: 15px;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
 }
 
 .form-item {
@@ -313,6 +282,14 @@ footer img {
     gap: 10px;
 }
 
+.form-item:has(textarea) {
+    grid-template-columns: 1fr;
+}
+
+.form-item:has(textarea) label {
+    margin-bottom: 5px;
+}
+
 .form-item label {
     font-weight: bold;
 }
@@ -320,9 +297,10 @@ footer img {
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: 100%;
+    s width: 100%;
     padding: 10px;
     font-size: 1rem;
+    font-family: var(--body-font);
     border: 1px solid #999;
     border-radius: 4px;
 }
@@ -341,38 +319,67 @@ footer img {
     margin-bottom: 10px;
 }
 
+/* Radio Buttons */
+
 .contact-form fieldset label {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.contact-form input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+/* Newsletter */
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter label {
     font-weight: normal;
 }
 
-.contact-form input[type="radio"],
 .contact-form input[type="checkbox"] {
-    margin-right: 8px;
+    width: 18px;
+    height: 18px;
 }
 
+/* Button */
+
 .contact-form button {
-    padding: 12px;
+    width: 100%;
+    padding: 14px;
     font-size: 1rem;
     font-weight: bold;
     background-color: var(--primary-color);
     color: var(--white);
     border: none;
-    cursor: pointer;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .contact-form button:hover {
     background-color: var(--accent1-color);
 }
 
-/* Employee Section */
+/* ==========================================
+   EMPLOYEE SECTION
+========================================== */
 
 .employees {
     border: 1px solid #555;
     padding: 30px;
     margin: 40px 0;
+    text-align: center;
 }
 
 .employees h2 {
@@ -381,12 +388,13 @@ footer img {
 
 .employee-grid {
     display: flex;
-    justify-content: space-evenly;
-    gap: 2rem;
+    justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .employee-grid figure {
+    margin: 0;
     text-align: center;
 }
 
@@ -403,8 +411,6 @@ footer img {
     color: var(--accent1-color);
 }
 
-/* Responsive */
-
 @media (max-width: 850px) {
 
     header,
@@ -419,6 +425,10 @@ footer img {
 
     .form-item {
         grid-template-columns: 1fr;
+    }
+
+    .newsletter {
+        justify-content: flex-start;
     }
 
     .employee-grid {
