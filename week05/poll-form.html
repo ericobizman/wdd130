@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML POLL FORM</title>
+    <link rel="stylesheet" href="styles/poll-form.css">
+
+</head>
+<header>
+    <h1>WDD 130 | HTML FORM-User Poll</h1>
+</header>
+
+<body>
+    <main>
+
+        <form>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <div class="form-item column2">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-item column2">
+                    <label for="useremail">Email</label>
+                    <input type="email" id="useremail" name="useremail" required>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Question</legend>
+                <div class="form-item column1">
+                    <label for="quantity">What is your favorite browser</label>
+                    <select name="browser" id="browser">
+                        <option value="edge">Edge</option>
+                        <option value="chrome">Chrome</option>
+                        <option value="firefox">Mozilla Firefox</option>
+                    </select>
+                </div>
+
+
+                <div class="form-item column1">
+                    <label for="pet">Do you have a pet?</label>
+                    <input type="checkbox" id="pet" name="pet">
+                </div>
+
+                <diV class="form-item">
+                    <label for="feedback">Places you have lived:</label>
+                    <textarea id="feedback" name="feedback"
+                      placeholder="Lagos, Abuja, Portharcourt"></textarea>
+
+                </diV>
+
+
+            </fieldset>
+
+            <button type="submit">Submit poll</button>
+        </form>
+
+    </main>
+</body>
+<footer></footer>
+
+</html>
